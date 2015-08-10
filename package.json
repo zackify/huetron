@@ -1,0 +1,8 @@
+{
+  "name": "huetron",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "node-ssdp": "^2.5.1"
+  }
+}
