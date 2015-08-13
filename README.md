@@ -1,15 +1,12 @@
-Currently in progress, don't actually use this.
+Currently in progress, it is a fully working menubar app that works cross platform to control your philips hue lights.
+
+![Example](example.png?raw=true)
 
 ##Building
 
 Until we package this up for release, running the app by doing:
-`npm install electron-prebuilt -g`
-`electron .`
 
-###Adding node modules
-
-~~~js
-npm install --save-dev electron-rebuild
-
-./node_modules/.bin/electron-rebuild
-~~~
+- `npm install electron-prebuilt -g`
+- change your ip address in hue.js
+- [create a user name](http://www.developers.meethue.com/documentation/getting-started) called `apideveloper` on your bridge
+- `electron .`

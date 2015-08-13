@@ -1,5 +1,6 @@
 var Menu = require('menu');
 var request = require('superagent')
+var ip = '192.168.1.3'
 
 module.exports = function(){
   var hue = {
@@ -9,7 +10,7 @@ module.exports = function(){
     renderMenu: function(){
       var self = this
       request
-      .get('http://192.168.1.3/api/newdeveloper/lights')
+      .get('http://'+ip+'/api/newdeveloper/lights')
       .end(function(err, response){
         self.state.all = false
         var lights = []
@@ -27,7 +28,7 @@ module.exports = function(){
     allLights: function(){
       var self = this
       request
-      .put('http://192.168.1.3/api/newdeveloper/groups/0/action')
+      .put('http://'+ip+'/api/newdeveloper/groups/0/action')
       .send({"on": !this.state.all})
       .set('Accept', 'application/json')
       .end(function(err,response){
@@ -43,7 +44,7 @@ module.exports = function(){
     light: function(light){
       var self = this
       request
-      .put('http://192.168.1.3/api/newdeveloper/lights/'+light+'/state')
+      .put('http://'+ip+'/api/newdeveloper/lights/'+light+'/state')
       .send({"on": !this.state.isOn[light]})
       .set('Accept', 'application/json')
       .end(function(err,response){
