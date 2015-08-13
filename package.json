@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "main": "main.js",
   "dependencies": {
-    "node-ssdp": "^2.5.1"
+    "superagent": "^1.3.0"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^0.30.4",
+    "electron-rebuild": "^0.2.5"
   }
 }
