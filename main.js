@@ -7,3 +7,5 @@ app.on('ready', function() {
   appIcon = new Tray('./icon.png');
   hue.renderMenu()
 })
+
+app.dock.hide()
